@@ -44,7 +44,7 @@ a:hover {
     position: relative;
   }
   &__image::after {
-    content: url(/images/icon-view.svg);
+    content: url(https://harshalslimaye.github.io/frontendmentor/nft-preview-card-component/images/icon-view.svg);
     position: absolute;
     top: 0;
     left: 0;
@@ -82,10 +82,10 @@ a:hover {
       margin-right: 5px;
     }
     &-price::before {
-      content: url(/images/icon-ethereum.svg);
+      content: url(https://harshalslimaye.github.io/frontendmentor/nft-preview-card-component/images/icon-ethereum.svg);
     }
     &-days::before {
-      content: url(/images/icon-clock.svg);
+      content: url(https://harshalslimaye.github.io/frontendmentor/nft-preview-card-component/images/icon-clock.svg);
     }
   }
 
