@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  color: hsl(215, 51%, 70%);
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
+
+a:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 90%;
+  max-width: 375px;
+  min-width: 300px;
+  background-color: hsl(216, 50%, 16%);
+  padding: 25px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.card__thumbnail {
+  width: 100%;
+  border-radius: 15px;
+}
+.card__image {
+  position: relative;
+}
+.card__image::after {
+  content: url(/images/icon-view.svg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(178, 100%, 50%, 0.4);
+  border-radius: 15px;
+  overflow: hidden;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+.card__image:hover::after {
+  cursor: pointer;
+  visibility: visible;
+}
+.card__title {
+  color: hsl(0, 0%, 100%);
+}
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__info-price {
+  color: hsl(178, 100%, 50%);
+}
+.card__info-price, .card__info-days {
+  display: flex;
+}
+.card__info-price::before, .card__info-days::before {
+  margin-right: 5px;
+}
+.card__info-price::before {
+  content: url(/images/icon-ethereum.svg);
+}
+.card__info-days::before {
+  content: url(/images/icon-clock.svg);
+}
+.card__separator {
+  border: none;
+  background: hsl(215, 32%, 27%);
+  height: 1px;
+  margin: 0.5rem 0 1rem 0;
+}
+.card__author {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.card__author-avatar {
+  width: 2rem;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 0.9rem;
+  }
+}/*# sourceMappingURL=style.css.map */

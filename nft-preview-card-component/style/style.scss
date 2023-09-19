@@ -1,0 +1,115 @@
+@import './variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $blue-main-bg;
+  color: $blue;
+  font-family: $font-family;
+  font-size: $font-size;
+}
+a {
+  text-decoration: none;
+  color: $white;
+}
+a:hover {
+  color: $cyan;
+}
+.page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 90%;
+  max-width: 375px;
+  min-width: 300px;
+  background-color: $blue-card-bg;
+  padding: 25px;
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  &__thumbnail {
+    width: 100%;
+    border-radius: $border-radius;
+  }
+  &__image {
+    position: relative;
+  }
+  &__image::after {
+    content: url(/images/icon-view.svg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(178, 100%, 50%, 0.4);
+    border-radius: $border-radius;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all 0.2s ease;
+  }
+  &__image:hover::after {
+    cursor: pointer;
+    visibility: visible;
+  }
+
+  &__title {
+    color: $white;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-price {
+      color: $cyan;
+    }
+    &-price, &-days {
+      display: flex;
+    }
+    &-price::before, &-days::before {
+      margin-right: 5px;
+    }
+    &-price::before {
+      content: url(/images/icon-ethereum.svg);
+    }
+    &-days::before {
+      content: url(/images/icon-clock.svg);
+    }
+  }
+
+  &__separator {
+    border: none;
+    background: $blue-inline;
+    height: 1px;
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  &__author {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    &-avatar {
+      width: 2rem;
+      border: 1px solid $white;
+      border-radius: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 0.9rem
+  }
+}
