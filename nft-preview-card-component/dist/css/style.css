@@ -46,23 +46,23 @@ a:hover {
 .card__image {
   position: relative;
 }
-.card__image::after {
+.card__image::before {
   content: url(https://harshalslimaye.github.io/frontendmentor/nft-preview-card-component/images/icon-view.svg);
   position: absolute;
-  top: 0;
   left: 0;
   right: 0;
+  top: 0;
   bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: hsla(178, 100%, 50%, 0.4);
-  border-radius: 15px;
-  overflow: hidden;
   visibility: hidden;
-  transition: all 0.2s ease;
+  border-radius: 15px;
+  max-height: 325px;
+  transition: ease 100ms;
 }
-.card__image:hover::after {
+.card__image:hover::before {
   cursor: pointer;
   visibility: visible;
 }
