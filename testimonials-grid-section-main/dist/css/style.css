@@ -1,0 +1,134 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+}
+
+.page {
+  width: 80%;
+  margin: 75px auto;
+  display: flex;
+}
+.page__left {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+.page__left-top, .page__left-bottom {
+  display: flex;
+}
+.page__right {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  margin: 15px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  gap: 20px;
+}
+.card__author {
+  display: flex;
+  align-items: center;
+}
+.card__author-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin-right: 10px;
+  border: 1px solid hsl(0, 0%, 100%);
+}
+.card__paragraph {
+  quotes: "“" "”";
+}
+.card__paragraph:before {
+  content: open-quote;
+}
+.card__paragraph:after {
+  content: close-quote;
+}
+
+.daniel {
+  background-image: url(/images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 80% 0px;
+  background-color: hsl(263, 55%, 52%);
+  color: hsl(0, 0%, 100%);
+}
+.daniel .card__author-tag {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+.daniel .card__paragraph {
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+.jonathan {
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(0, 0%, 100%);
+}
+.jonathan .card__author-tag {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+.jonathan .card__paragraph {
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+.patrick {
+  background-color: hsl(219, 29%, 14%);
+  color: hsl(0, 0%, 100%);
+}
+.patrick .card__author-tag {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+.patrick .card__paragraph {
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+.jeanette {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+}
+.jeanette .card__author-tag {
+  color: hsla(217, 19%, 35%, 0.5);
+}
+.jeanette .card__paragraph {
+  color: hsla(217, 19%, 35%, 0.7);
+}
+
+.kira {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+}
+.kira .card__author-tag {
+  color: hsla(217, 19%, 35%, 0.5);
+}
+.kira .card__paragraph {
+  color: hsla(217, 19%, 35%, 0.7);
+}
+
+@media screen and (max-width: 640px) {
+  .page {
+    width: 80%;
+    flex-direction: column;
+  }
+  .page__left-top, .page__left-bottom {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 375px) {
+  .page {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
