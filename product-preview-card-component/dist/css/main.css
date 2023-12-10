@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+}
+
+.page {
+  background-color: hsl(30, 38%, 92%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 35%;
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+}
+.card__left {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  width: 50%;
+  background-image: url("/images/image-product-desktop.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.card__right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px 25px;
+}
+.card__right-title {
+  font-family: "Fraunces", serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: hsl(212, 21%, 14%);
+}
+.card__right-category {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+.card__right-price {
+  font-size: 2rem;
+  font-family: "Fraunces", serif;
+  color: hsl(158, 36%, 37%);
+  display: flex;
+}
+.card__right-price span {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+  margin-left: 25px;
+  margin-top: 5px;
+}
+.card__right-btn {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(158, 36%, 37%);
+  padding: 10px;
+  box-shadow: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.card__right-btn img {
+  margin-right: 10px;
+}
+.card__right-btn:hover {
+  background-color: hsl(157, 43%, 18%);
+}
+
+@media screen and (max-width: 1280px) {
+  .card {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .card {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .card {
+    flex-direction: column;
+  }
+  .card__left, .card__right {
+    width: 100%;
+  }
+  .card__left {
+    height: 250px;
+    background-image: url("/images/image-product-mobile.jpg");
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+  }
+}/*# sourceMappingURL=main.css.map */

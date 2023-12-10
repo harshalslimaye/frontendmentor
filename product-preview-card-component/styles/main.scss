@@ -1,0 +1,130 @@
+$dark-cyan: hsl(158, 36%, 37%);
+$dark-cyan-hover: hsl(157, 43%, 18%);;
+$cream: hsl(30, 38%, 92%);
+$dark-blue: hsl(212, 21%, 14%);
+$grayish-blue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+$montserrat: 'Montserrat', sans-serif;
+$fraunces: 'Fraunces', serif;
+
+$font-size: 14px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html, body {
+  font-family: $montserrat;
+  color: $grayish-blue;
+  font-size: $font-size;
+}
+
+.page {
+  background-color: $cream;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 35%;
+  display: flex;
+  background-color: $white;
+  border-radius: 15px;
+  &__left {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 50%;
+    background-image: url('/images/image-product-desktop.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  &__right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px 25px;
+    &-title {
+      font-family: $fraunces;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: $dark-blue;
+    }
+    &-category {
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 3px;
+    }
+    &-price {
+      font-size: 2rem;
+      font-family: $fraunces;
+      color: $dark-cyan;
+      display: flex;
+      span {
+        font-size: 1rem;
+        font-family: $montserrat;
+        color: $grayish-blue;
+        text-decoration: line-through;
+        margin-left: 25px;
+        margin-top: 5px;
+      }
+    }
+    &-btn {
+      font-family: $montserrat;
+      color: $white;
+      background-color: $dark-cyan;
+      padding: 10px;
+      box-shadow: none;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      img {
+        margin-right: 10px;
+      }
+      &:hover {
+        background-color: $dark-cyan-hover;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .card {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .card {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width:800px) {
+  .card {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .card {
+    flex-direction: column;
+    &__left, &__right {
+      width: 100%;
+    }
+    &__left {
+      height: 250px;
+      background-image: url('/images/image-product-mobile.jpg');
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 15px;
+    }
+  }
+}
