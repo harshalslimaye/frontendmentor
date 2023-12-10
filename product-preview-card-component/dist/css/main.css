@@ -29,7 +29,7 @@ html, body {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   width: 50%;
-  background-image: url("/images/image-product-desktop.jpg");
+  background-image: url("../../images/image-product-desktop.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -109,7 +109,7 @@ html, body {
   }
   .card__left {
     height: 250px;
-    background-image: url("/images/image-product-mobile.jpg");
+    background-image: url("../../images/image-product-mobile.jpg");
     border-bottom-left-radius: 0;
     border-top-right-radius: 15px;
   }
