@@ -21,7 +21,7 @@ body {
 .page .top-banner {
   height: 35vh;
   width: 100%;
-  background-image: url("../../assets/images/background-pattern-desktop.svg");
+  background-image: url("https://harshalslimaye.github.io/frontendmentor/faq-accordion/assets/images/background-pattern-desktop.svg");
 }
 .page .widget {
   margin: 0 auto;
