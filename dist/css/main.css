@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  color: hsl(292, 42%, 14%);
+}
+
+.page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: hsla(292, 16%, 49%, 0.2);
+}
+.page .top-banner {
+  height: 35vh;
+  width: 100%;
+  background-image: url("../../assets/images/background-pattern-desktop.svg");
+}
+.page .widget {
+  margin: 0 auto;
+  border-radius: 15px;
+  margin-top: -100px;
+  width: 35%;
+  background: hsl(0, 0%, 100%);
+  padding: 25px;
+}
+.page h1.title {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.page h1.title img {
+  margin-right: 25px;
+}
+
+.faqs {
+  list-style: none;
+}
+.faqs__item-question {
+  font-weight: 700;
+  margin: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.faqs__item-question:hover {
+  color: hsl(280.92, 82.98%, 53.92%);
+}
+.faqs__item-answer {
+  color: hsl(292, 16%, 49%);
+  display: none;
+  transition: all 0.25s;
+}
+.faqs__item:first-child .faqs__item-answer {
+  display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  .page .widget {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .page .widget {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .page .widget {
+    width: 90%;
+  }
+}/*# sourceMappingURL=main.css.map */
