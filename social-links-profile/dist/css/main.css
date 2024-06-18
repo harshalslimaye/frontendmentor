@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 100%);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 20%;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 12%);
+}
+.card__avatar {
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+}
+.card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.card__info-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.card__info-location {
+  color: hsl(75, 94%, 57%);
+  font-weight: 600;
+}
+.card__tagline {
+  font-size: 0.8rem;
+}
+.card__links {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  width: 100%;
+}
+.card__links li {
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: hsl(0, 0%, 20%);
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1280px) {
+  .card {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .card {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .card {
+    width: 90%;
+  }
+}/*# sourceMappingURL=main.css.map */
